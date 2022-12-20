@@ -1,7 +1,7 @@
 const canvas =document.getElementById("board");
 const ctx = canvas.getContext("2d");
 
-let speed = 7;
+let speed = 8;
 
 class snakePart {
     constructor(x, y){
@@ -24,16 +24,39 @@ let appleY = 5;
 let xVelocity = 0;
 let yVelocity = 0;
 
+let score = 0;
+
 //Game LOOP
 function drawGame() {
     changeSnakePosition();
-
+ let result = gameOver();
+ if(result){
+   return;
+ }
     checkAppleCollision();
+    drawScore()
     clearScreen();
     drawApple();
+
     drawSnake();
+   
+    drawScore();
 setTimeout (drawGame, 1000 / speed);
 }
+
+function gameOver () {
+let gameOver = false;
+if(headX < 0){
+    gameOver = true;
+}
+}
+
+//score 
+function drawScore() {
+    ctx.fillStyle = "white";
+  ctx.font = "13px Verdana";
+  ctx.fillText("Score " + score, canvas.width - 70, 20);
+ }
 
 function clearScreen() {
 ctx.fillStyle= "black";
@@ -45,12 +68,10 @@ function drawSnake() {
     ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);
 
     ctx.fillStyle = "green";
-    for (let i=0; i < snakePart; i++){
+    for (let i=0; i < snakeParts.length; i++){
         let part = snakePart[i];
         ctx.fillRect(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
         }
-        
-        
 }
 
 function changeSnakePosition() {
@@ -64,11 +85,11 @@ function drawApple() {
 }
 
 function checkAppleCollision() {
-
     if (appleX == headX && appleY == headY){
         appleX = Math.floor(Math.random() * tileCount);
         appleY = Math.floor(Math.random() * tileCount);
-        snakeTail++;
+        tailLength++;
+       score++;
     }
 }
 
