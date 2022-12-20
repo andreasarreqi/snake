@@ -29,26 +29,20 @@ let score = 0;
 //Game LOOP
 function drawGame() {
     changeSnakePosition();
- let result = gameOver();
- if(result){
-   return;
- }
+
     checkAppleCollision();
     drawScore()
     clearScreen();
     drawApple();
 
     drawSnake();
-   
+   gameOver();
     drawScore();
 setTimeout (drawGame, 1000 / speed);
 }
 
 function gameOver () {
-let gameOver = false;
-if(headX < 0){
-    gameOver = true;
-}
+
 }
 
 //score 
@@ -68,10 +62,7 @@ function drawSnake() {
     ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);
 
     ctx.fillStyle = "green";
-    for (let i=0; i < snakeParts.length; i++){
-        let part = snakePart[i];
-        ctx.fillRect(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
-        }
+    
 }
 
 function changeSnakePosition() {
