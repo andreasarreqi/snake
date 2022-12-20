@@ -5,18 +5,21 @@
 body {
     font-family: 'Lato';
     background-color: darkgreen;
-    height: 100vh;
-    width: 100vw;
     justify-content: center;
     align-items: center;
+    margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 }
-/** GIVING THE BOARD ITS SIZE **/
-#game-board {
-   margin: 0 auto;
-    background-color: yellow;
-    width: 80vmin;
-    height: 80vmin;
+
+canvas{
+    box-shadow: black 20px 10px 50px;
+   
 }
+
 .logo {
 margin: 0 auto;
 text-align: center;
