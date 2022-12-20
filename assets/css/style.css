@@ -1,0 +1,30 @@
+/**FONT FAMILY : ROBOTO **/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/**SETTING THE BACKGROUND COLOR**/
+body {
+    font-family: 'Lato';
+    background-color: darkgreen;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+/** GIVING THE BOARD ITS SIZE **/
+#game-board {
+   margin: 0 auto;
+    background-color: yellow;
+    width: 80vmin;
+    height: 80vmin;
+}
+.logo {
+margin: 0 auto;
+text-align: center;
+font-size: 5rem;
+}
+
+.score {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+}
