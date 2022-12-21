@@ -5,7 +5,7 @@ let speed = 8;
 
 class snakePart {
     constructor(x, y){
-        thix.x = x;
+        this.x = x;
         this.y = y;
     }
 }
@@ -41,7 +41,7 @@ function drawGame() {
     }
 
     checkAppleCollision();
-    drawScore()
+    drawScore();
     clearScreen();
     drawApple();
 
@@ -66,12 +66,10 @@ function drawGame() {
 setTimeout (drawGame, 1000 / speed);
 }
 function isGameOver(){
-    let gameOver=false;
-    
     if(headX < 0) {//if snake hits left wall
         alert("Game Over");
     }
-    else if(headX===tileCount) {//if snake hits right wall
+    else if(headX === tileCount) {//if snake hits right wall
         alert("Game Over");
     }
     else if(headY < 0) {//if snake hits wall at the top
@@ -101,21 +99,26 @@ function drawSnake() {
       ctx.fillRect(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
     }
     if (headY < 0) {
-        headY = canvas.height - grid;
+        headY = canvas.height - tileCount;
       }
       else if (headY >= canvas.height) {
         headY = 0;
       }
       if (headX < 0) {
-        headX = canvas.width - grid;
+        headX = canvas.width - tileCount;
       }
       else if (headX >= canvas.width) {
         headX = 0;
       }
+
+        snakeParts.push(new snakePart(headX, headY));
+        while (snakeParts.length > tailLength){
+            snakeParts.shift();
+        }
+        ctx.fillStyle = "orange";
+        ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);
     
-    ctx.fillStyle = "orange";
-    ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);
-  }
+    }
 
 function changeSnakePosition() {
     headX = headX + xVelocity; 
@@ -136,7 +139,7 @@ function checkAppleCollision() {
     }
 }
 
-document.addEventListener('keydown', keyDown)
+document.addEventListener('keydown', keyDown);
 
 //up key
 function keyDown (event) {
