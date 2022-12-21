@@ -24,6 +24,9 @@ An interactive snake game.
   - The walls serve as borders which means you lose the game as you run into them.
   - You get an alert when you lose the game which lets you restart the game.
 
+![snake-alert](https://user-images.githubusercontent.com/114533841/208976840-24e1079c-142d-4c1f-8dae-b6e5ff806312.PNG)
+![snake-on process](https://user-images.githubusercontent.com/114533841/208976842-bcc5a35f-1bd2-4917-9f86-dfcaa18e694f.PNG)
+![snake-game-over](https://user-images.githubusercontent.com/114533841/208976844-7316a838-2c3b-429d-b00c-1a3c88f9f92c.PNG)
 
 ### Features Left to Implement
   - Putting a leaderboard section.
