@@ -30,3 +30,83 @@ font-size: 5rem;
     text-align: center;
     font-size: 4rem;
 }
+
+@media screen and (max-width: 300px) {
+    html {
+       overflow: hidden;
+    }
+
+    hody { 
+width: 50px;
+    }
+
+
+   .logo{ 
+    font-size: 2rem;
+   }
+   canvas {
+    margin: 0 auto;
+    width: 13rem;
+    height: 13rem;
+   }
+ }
+
+@media screen and (max-width: 320px) {
+    html {
+       overflow: hidden;
+    }
+
+    hody { 
+width: 50px;
+    }
+
+
+   .logo{ 
+    font-size: 2rem;
+   }
+   canvas {
+    margin: 0 auto;
+    width: 15rem;
+    height: 15rem;
+   }
+ }
+
+ @media screen and (max-width: 480px) {
+    html {
+       overflow: hidden;
+    }
+
+    hody { 
+width: 50px;
+    }
+
+
+   .logo{ 
+    font-size: 2rem;
+   }
+   canvas {
+    margin: 0 auto;
+    width: 15rem;
+    height: 25rem;
+   }
+ }
+ 
+ @media screen and (max-width: 768px) {
+    html {
+       overflow: hidden;
+    }
+
+    hody { 
+width: 30px;
+    }
+
+
+   .logo{ 
+    font-size: 2rem;
+   }
+   canvas {
+    margin: 0 auto;
+    width: 35rem;
+    height: 35rem;
+   }
+ }
