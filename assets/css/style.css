@@ -1,131 +1,28 @@
-/**FONT FAMILY : ROBOTO **/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
-/**SETTING THE BACKGROUND COLOR**/
-body {
-    font-family: 'Lato';
-    background-color: darkgreen;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-            padding: 0px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-}
-
-canvas{
-    box-shadow: black 20px 10px 50px;
-}
-
-.logo {
-margin: 0 auto;
-text-align: center;
-font-size: 5rem;
-}
-
-.score {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 4rem;
-}
-
-@media screen and (max-width: 300px) {
-    html {
-       overflow: hidden;
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      background-color: black;
     }
 
-    hody { 
-width: 50px;
+    #game-board {
+      background-color: #CCC;
+      width: 100vmin;
+      height: 100vmin;
+      display: grid;
+      grid-template-rows: repeat(21, 1fr);
+      grid-template-columns: repeat(21, 1fr);
     }
 
-
-   .logo{ 
-    font-size: 2rem;
-   }
-   canvas {
-    margin: 0 auto;
-    width: 13rem;
-    height: 13rem;
-   }
- }
-
-@media screen and (max-width: 320px) {
-    html {
-       overflow: hidden;
+    .snake {
+      background-color: hsl(200, 100%, 50%);
+      border: .25vmin solid black;
     }
 
-    hody { 
-width: 50px;
+    .food {
+      background-color: hsl(50, 100%, 50%);
+      border: .25vmin solid black;
     }
-
-
-   .logo{ 
-    font-size: 2rem;
-   }
-   canvas {
-    margin: 0 auto;
-    width: 15rem;
-    height: 15rem;
-   }
- }
-
- @media screen and (max-width: 480px) {
-    html {
-       overflow: hidden;
-    }
-
-    hody { 
-width: 50px;
-    }
-
-
-   .logo{ 
-    font-size: 2rem;
-   }
-   canvas {
-    margin: 0 auto;
-    width: 15rem;
-    height: 25rem;
-   }
- }
- 
- @media screen and (max-width: 768px) {
-    html {
-       overflow: hidden;
-    }
-
-    hody { 
-width: 30px;
-    }
-
-
-   .logo{ 
-    font-size: 2rem;
-   }
-   canvas {
-    margin: 0 auto;
-    width: 35rem;
-    height: 35rem;
-   }
- }
- @media screen and (max-width: 800px) {
-    html {
-       overflow: hidden;
-    }
-
-    hody { 
-width: 30px;
-    }
-
-
-   .logo{ 
-    font-size: 2rem;
-   }
-   canvas {
-    margin: 0 auto;
-    width: 35rem;
-    height: 35rem;
-   }
- }

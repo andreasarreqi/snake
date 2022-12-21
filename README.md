@@ -1,7 +1,9 @@
-@(https://andreasarreqi.github.io/promo-flex/)
 # SNake
 
-
+## Technologies Used 
+- HTML
+- CSS
+- JavaScript
 
 
 
@@ -13,19 +15,18 @@ An interactive snake game with few speed challenges when you reach a certain sco
 
   - Food (Apple) goes to a random location.
   - Snake gets longer when it collides with the apple.
-  - Score gets incremented correclty each time the snake eats an apple.
+  - The game ends when the snake runs into itself.
   - The walls serve as borders which means you lose the game as you run into them.
 
 
 
 
 ### Features Left to Implement
-  - Correcting the food loop so it doesn't bug.
-  - Reaching the game over when the snake runs into itself.
+  - Putting a leaderboard section.
+  - Incrementing score.
 
 ## Testing 
-
-Did manual testing mostly. Sometimes the food(apple) doesn't appear after reaching a certain score.
+Did manual testing. It works okay.
 
 
 ### Validator Testing 
@@ -36,9 +37,6 @@ Did manual testing mostly. Sometimes the food(apple) doesn't appear after reachi
   
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator)
 
-  - JSHint
-  17 warnings.
-  
   Lighthouse Desktop & Mobile :
   
   
