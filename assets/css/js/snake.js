@@ -59,7 +59,7 @@ function drawGame() {
       }
 setTimeout (drawGame, 1000 / speed);
 }
-//wall borders
+
 function isGameOver(){
     if(headX < 0) {//if snake hits left wall
      alert("Game Over. Please refresh the page to restart the game");
@@ -139,9 +139,8 @@ function checkAppleCollision() {
 
 document.addEventListener('keydown', keyDown);
 
-//up key
 function keyDown (event) {
-    //up key
+
     if(event.keyCode == 38) {
         if (yVelocity == 1){
             return;
@@ -149,7 +148,7 @@ function keyDown (event) {
         yVelocity = -1;
         xVelocity = 0;
     }
-    //down key
+    
     if(event.keyCode == 40) {
         if (yVelocity == -1){
             return;
@@ -157,7 +156,7 @@ function keyDown (event) {
         yVelocity = 1;
         xVelocity = 0;
     }
-    //left key
+   
     if(event.keyCode == 37) {
         if (xVelocity == 1){
             return;
@@ -165,7 +164,7 @@ function keyDown (event) {
         yVelocity = 0;
         xVelocity = -1;
     }
-    //right key
+   
     if(event.keyCode == 39) {
         if (xVelocity == -1){
             return;

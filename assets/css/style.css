@@ -110,3 +110,22 @@ width: 30px;
     height: 35rem;
    }
  }
+ @media screen and (max-width: 800px) {
+    html {
+       overflow: hidden;
+    }
+
+    hody { 
+width: 30px;
+    }
+
+
+   .logo{ 
+    font-size: 2rem;
+   }
+   canvas {
+    margin: 0 auto;
+    width: 35rem;
+    height: 35rem;
+   }
+ }

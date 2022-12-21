@@ -42,8 +42,6 @@ Did manual testing mostly. Sometimes the food(apple) doesn't appear after reachi
   Lighthouse Desktop & Mobile :
   
   
-
-
 ### Unfixed Bugs
 
 No unfixed bugs found.
