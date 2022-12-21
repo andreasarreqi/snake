@@ -1,7 +1,7 @@
 const canvas =document.getElementById("board");
 const ctx = canvas.getContext("2d");
 
-let speed = 8;
+let speed = 7;
 
 class snakePart {
     constructor(x, y){
@@ -51,33 +51,30 @@ function drawGame() {
     if (score > 5) {
         speed = 9;
       }
-      if (score > 10) {
-        speed = 15;
-      }
       if (score > 15) {
         speed = 20;
-      }
-      if (score > 20) {
-        speed = 25;
       }
       if (score > 30) {
         speed = 30;
       }
 setTimeout (drawGame, 1000 / speed);
 }
+//wall borders
 function isGameOver(){
     if(headX < 0) {//if snake hits left wall
-        alert("Game Over");
+     alert("Game Over. Please refresh the page to restart the game");
+        
     }
     else if(headX === tileCount) {//if snake hits right wall
-        alert("Game Over");
+        alert("Game Over. Please refresh the page to restart the game");
     }
     else if(headY < 0) {//if snake hits wall at the top
-        alert("Game Over");
+        alert("Game Over. Please refresh the page to restart the game");
     }
     else if(headY === tileCount) {//if snake hits wall at the bottom
-        alert("Game Over"); 
+        alert("Game Over. Please refresh the page to restart the game");
     }
+
 }
 
 //score 
@@ -134,8 +131,9 @@ function checkAppleCollision() {
     if (appleX == headX && appleY == headY){
         appleX = Math.floor(Math.random() * tileCount);
         appleY = Math.floor(Math.random() * tileCount);
+        score++;
         tailLength++;
-       score++;
+      
     }
 }
 
